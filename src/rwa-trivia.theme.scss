@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$trivia-app-primary: mat-palette($mat-light-blue);
+$trivia-app-accent:  mat-palette($mat-orange, A200, A100, A400);
+$trivia-app-warn:    mat-palette($mat-red);
+
+$trivia-app-theme-background: (
+  status-bar: map-get($mat-teal, 300),
+  app-bar:    map-get($mat-teal, 100),
+  background: map-get($mat-teal, 50),
+  hover:      rgba(black, 0.04),
+  card:       white,
+  dialog:     white,
+  disabled-button:   rgba(black, 0.12)
+);
+
+@function custom-app-theme($primary, $accent, $warn, $background) {
+
+  @return (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+    is-dark: false,
+    foreground: $mat-light-theme-foreground,
+    background: $background,
+  );
+}
+
+// Create the theme object (a Sass map containing all of the palettes).
+$trivia-app-theme: mat-light-theme($trivia-app-primary, $trivia-app-accent, $trivia-app-warn);
+// $trivia-app-theme: custom-app-theme($trivia-app-primary, $trivia-app-accent, $trivia-app-warn, $trivia-app-theme-background);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($trivia-app-theme);

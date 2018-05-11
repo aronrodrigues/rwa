@@ -38,7 +38,7 @@
       ],
       "ordered": false,
       "tags": ["JavaScript"],
-      "categories": [{ "id": 2 }]
+      "categoryIds": [2]
     }
   ]
 }

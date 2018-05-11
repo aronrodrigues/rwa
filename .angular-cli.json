@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.scss",
+        "rwa-trivia.theme.scss"
+
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
